@@ -1,0 +1,61 @@
+\documentclass[12pt]{article}
+% \usepackage{hyperref} % for \url{}
+
+% Garamond for body text
+\usepackage{ebgaramond} % change font to garamond
+
+% Source Sans for Section Headings
+\usepackage{sectsty}        % for \allsectionsfont
+\allsectionsfont{\sffamily} % Changes section font to sans serif
+\usepackage{sourcesanspro}  % changes sans serif font to Source Sans Pro
+
+% Remove 'abstract' title hack
+\usepackage{abstract}
+\renewcommand{\abstractname}{}    % clear the title
+\renewcommand{\absnamepos}{empty} % originally center
+
+% Make section numbers in left margin hack
+\makeatletter
+\def\@seccntformat#1{\protect\makebox[0pt][r]{\csname the#1\endcsname\quad}}
+\makeatother
+
+% Use Math, fool!
+\usepackage{amssymb,amsmath}
+\DeclareMathOperator*{\argmax}{arg\,max}
+
+\title{\sffamily\bfseries Notes on Probablistic Graphical Models}
+\author{Victor Gan and Julieta Martinez}
+\date{\today}
+
+\begin{document}
+% =============================================================================
+
+% ==============================
+\maketitle
+
+% ==============================
+\begin{abstract}
+Various musings.
+\end{abstract}
+
+% ==============================
+\section{Section}
+Do you even math?
+
+$$ X = 
+\begin{bmatrix}
+x_{11} &  x_{12} & \dotsm &  x_{1j} & \dotsm & x_{1D} \\
+x_{21} &  x_{22} & \dotsm &  x_{2j} & \dotsm & x_{2D} \\
+\vdots &  \vdots & \ddots &  \vdots & \ddots & \vdots \\
+x_{i1} &  x_{i2} & \dotsm &  x_{ij} & \dotsm & x_{iD} \\
+\vdots &  \vdots & \ddots &  \vdots & \ddots & \vdots \\
+x_{N1} &  x_{N2} & \dotsm &  x_{Nj} & \dotsm & x_{ND} \\
+\end{bmatrix} 
+$$
+
+
+% ==============================
+\bibliographystyle{plain}
+\bibliography{bibliography}
+
+\end{document}
